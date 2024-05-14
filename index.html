@@ -3,25 +3,73 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: green;
+			color: white;
+			text-align: center;
+			padding-right: 50px;
+		}
+		input{
+			align-content: center;
+		}
+		img{
+			width: 300px;
+			height: 500px;
+			padding-top: 50px;
+		}
+		button{
+			font-size: 30px;
+			color: green;
+		}
+	</style>
 </head>
-<h1>JavaScript Variables</h1>
-
-<p>In this example, x, y, and z are variables.</p>
-
-<p id="demo"></p>
-
-<script type="text/javascript">
-
-var x = 5;
-var y = 3;
-var z = x % y;
-var a = --x; //decrement to x removes one to it's value 
-var b = ++y; //increment to y adds one to it's value
-var c = a * b;
-document.getElementById("demo").innerHTML = 
-"The value of z is: " + z + "<p> The value of c is: " + c + "</p>";
-</script>
 <body>
+	<h1>Baldi's Calculator</h1>
+	<div class="col-md-6">
+	<form>
+		Enter 1st Number: <input type="text" id="num1">
+		Enter 2nd Number: <input type="text" id="num2">
+	</form>
+	<script type="text/javascript">
+        function plus(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+                let sum = Number(num1) + Number(num2);
+            window.alert("The sum is: "+ sum)
+        }
 
+        function minus(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            	let difference = Number(num1) - Number(num2);
+            window.alert("The difference is "+ difference)
+        }
+
+        function times(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            	let product = Number(num1) * Number(num2);
+            window.alert("The product is "+ product)
+        }
+
+        function square(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+                let square = Number(num1) ** Number(num2);
+            window.alert("The square is: "+ square)
+        }
+    </script>
+    <br><br>
+    <form>
+		<button type="Submit" onclick="plus()">SUM</button> <button class="btn btn-warning btn-lg" onclick="minus()" id="subtract">SUBTRACT</button>
+	</form>
+	<br><br>
+	<form>
+		<button type="Submit" onclick="times()">MULTIPLY</button> <button class="btn btn-warning btn-lg" onclick="square()">SQUARE</button>
+	</form>
+	</div>
+	<img src="https://static.wikia.nocookie.net/baldis-basics-in-education-and-learning/images/2/2f/ClassicRender.png/revision/latest/scale-to-width-down/1000?cb=20231020225027">
 </body>
 </html>
